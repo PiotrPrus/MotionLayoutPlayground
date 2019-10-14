@@ -9,4 +9,6 @@
     <string name="scene_two_info">OnClick action attached to rectangle. This action start transition to start or transition to end.</string>
     <string name="scene_three_title">Scene 3</string>
     <string name="scene_three_info">During swipe we are changing custom attribute, which is background color, from blue to red</string>
+    <string name="scene_four_title">Scene 4</string>
+    <string name="scene_four_info">In this scene, we added keyFrameSet with one keyPosition that locates the box on the left side of screen exactly at 50th frame of animation(out of 100)</string>
 </resources>
