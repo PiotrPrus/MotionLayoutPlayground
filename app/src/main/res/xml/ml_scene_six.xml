@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:motionInterpolator="easeOut"
+        app:duration="2500">
+        <OnClick
+            app:targetId="@id/autumnLeafSceneSix"
+            app:clickAction="transitionToEnd|jumpToStart"/>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleY="0.5"
+                app:framePosition="25"
+                app:motionTarget="@id/autumnLeafSceneSix" />
+            <KeyAttribute
+                android:scaleX="1.3"
+                app:framePosition="50"
+                app:motionTarget="@id/autumnLeafSceneSix" />
+            <KeyAttribute
+                android:scaleY="0.3"
+                app:framePosition="75"
+                app:motionTarget="@id/autumnLeafSceneSix" />
+            <KeyAttribute
+                android:scaleY="0.3"
+                android:scaleX="1.2"
+                app:framePosition="100"
+                app:motionTarget="@id/autumnLeafSceneSix"/>
+            <KeyPosition
+                app:framePosition="20"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/autumnLeafSceneSix"
+                app:percentY="0.25" />
+            <KeyPosition
+                app:framePosition="40"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/autumnLeafSceneSix"
+                app:percentY="-0.25" />
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/autumnLeafSceneSix"
+                app:percentY="0.2" />
+            <KeyPosition
+                app:framePosition="70"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/autumnLeafSceneSix"
+                app:percentY="-0.15" />
+            <KeyPosition
+                app:framePosition="90"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/autumnLeafSceneSix"
+                app:percentY="0.1" />
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/autumnLeafSceneSix"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/autumnLeafSceneSix"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+</MotionScene>
