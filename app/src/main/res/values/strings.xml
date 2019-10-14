@@ -7,4 +7,6 @@
     <string name="scene_one_title">Scene 1</string>
     <string name="scene_two_title">Scene 2</string>
     <string name="scene_two_info">OnClick action attached to rectangle. This action start transition to start or transition to end.</string>
+    <string name="scene_three_title">Scene 3</string>
+    <string name="scene_three_info">During swipe we are changing custom attribute, which is background color, from blue to red</string>
 </resources>
