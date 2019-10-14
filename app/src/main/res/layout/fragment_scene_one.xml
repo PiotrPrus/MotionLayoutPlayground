@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layoutDescription="@xml/ml_scene_one"
     tools:context=".fragments.SceneOneFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/sceneOneRectangle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/blue_rectangle" />
 
-</FrameLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

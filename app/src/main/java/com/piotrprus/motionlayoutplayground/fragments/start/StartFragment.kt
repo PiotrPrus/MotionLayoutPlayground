@@ -41,5 +41,5 @@ class StartFragment : Fragment() {
     }
 
 private val startSceneList =
-    listOf(StartSceneItem("Scene 1", R.id.sceneOneFragment, "Test dialog for first scene"))
+    listOf(StartSceneItem(getString(R.string.scene_one_title), R.id.sceneOneFragment, getString(R.string.scene_one_info)))
 }
