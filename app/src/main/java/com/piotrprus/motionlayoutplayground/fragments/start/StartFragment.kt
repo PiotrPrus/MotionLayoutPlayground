@@ -69,7 +69,9 @@ class StartFragment : Fragment() {
                     )
                 ),
                 StartSceneItem(
-                    "Scene 6 - leaf", R.id.sceneSixFragment, "test desc"
+                    getString(R.string.scene_six_title),
+                    R.id.sceneSixFragment,
+                    getString(R.string.scene_six_info)
                 )
             )
         }
