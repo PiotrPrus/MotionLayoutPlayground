@@ -11,4 +11,6 @@
     <string name="scene_three_info">During swipe we are changing custom attribute, which is background color, from blue to red</string>
     <string name="scene_four_title">Scene 4</string>
     <string name="scene_four_info">In this scene, we added keyFrameSet with one keyPosition that locates the box on the left side of screen exactly at 50th frame of animation(out of 100)</string>
+    <string name="scene_five_title">Scene 5</string>
+    <string name="scene_five_info">This scene have two additional KeyAttributes, which set scale. The first is responsible to scale up the view to 150% in 25th frame and second is responsible to scale down to 75% in frame 75th.</string>
 </resources>

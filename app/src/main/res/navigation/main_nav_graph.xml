@@ -37,4 +37,9 @@
         android:name="com.piotrprus.motionlayoutplayground.fragments.SceneFourFragment"
         android:label="fragment_scene_four"
         tools:layout="@layout/fragment_scene_four" />
+    <fragment
+        android:id="@+id/sceneFiveFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneFiveFragment"
+        android:label="fragment_scene_five"
+        tools:layout="@layout/fragment_scene_five" />
 </navigation>
