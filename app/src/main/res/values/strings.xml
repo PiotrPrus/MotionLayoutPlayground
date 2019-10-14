@@ -5,4 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="scene_one_info">OnSwipe transition attached to rectangle. You can drag it up and down or release, then object will position nicely at start or end constraint depends on release position</string>
     <string name="scene_one_title">Scene 1</string>
+    <string name="scene_two_title">Scene 2</string>
+    <string name="scene_two_info">OnClick action attached to rectangle. This action start transition to start or transition to end.</string>
 </resources>

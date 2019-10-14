@@ -8,10 +8,23 @@
     <fragment
         android:id="@+id/startFragment"
         android:name="com.piotrprus.motionlayoutplayground.fragments.start.StartFragment"
-        android:label="StartFragment" />
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_sceneOneFragment"
+            app:destination="@id/sceneOneFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_sceneTwoFragment"
+            app:destination="@id/sceneTwoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/sceneOneFragment"
         android:name="com.piotrprus.motionlayoutplayground.fragments.SceneOneFragment"
         android:label="fragment_scene_one"
         tools:layout="@layout/fragment_scene_one" />
+    <fragment
+        android:id="@+id/sceneTwoFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneTwoFragment"
+        android:label="fragment_scene_two"
+        tools:layout="@layout/fragment_scene_two" />
 </navigation>

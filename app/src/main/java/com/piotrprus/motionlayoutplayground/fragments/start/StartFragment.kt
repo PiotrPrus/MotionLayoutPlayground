@@ -40,6 +40,20 @@ class StartFragment : Fragment() {
         findNavController().navigate(destination)
     }
 
-private val startSceneList =
-    listOf(StartSceneItem(getString(R.string.scene_one_title), R.id.sceneOneFragment, getString(R.string.scene_one_info)))
+    private val startSceneList: List<StartSceneItem>
+        get() {
+            return listOf(
+                StartSceneItem(
+                    resources.getString(R.string.scene_one_title),
+                    R.id.sceneOneFragment,
+                    resources.getString(R.string.scene_one_info)
+                ),
+                StartSceneItem(
+                    getString(R.string.scene_two_title), R.id.sceneTwoFragment, getString(
+                        R.string.scene_two_info
+                    )
+                )
+            )
+        }
+
 }
