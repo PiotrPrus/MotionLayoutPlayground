@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d9d9d9"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/itemStartSceneButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            tools:text="Scene 1" />
+
+        <ImageButton
+            android:id="@+id/itemStartInfoButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_info_24px" />
+
+    </LinearLayout>
+</layout>
