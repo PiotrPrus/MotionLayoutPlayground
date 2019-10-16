@@ -15,4 +15,6 @@
     <string name="scene_five_info">This scene have two additional KeyAttributes, which set scale. The first is responsible to scale up the view to 150% in 25th frame and second is responsible to scale down to 75% in frame 75th.</string>
     <string name="scene_six_info">This scene combines keyPositions and keyAttributes. One responsible to position the view in X/Y and second responsible for changing it scales to look more natural</string>
     <string name="scene_six_title">Scene 6 - leaf</string>
+    <string name="sceneSevenTitle">Scene 7(text)</string>
+    <string name="sceneSevenInfo">This scene contains two views, box and text. After box end the transition, the text changes. CustomAttribute with `customStringValue` is used to change text</string>
 </resources>

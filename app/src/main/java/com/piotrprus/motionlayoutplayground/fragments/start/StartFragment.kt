@@ -72,6 +72,11 @@ class StartFragment : Fragment() {
                     getString(R.string.scene_six_title),
                     R.id.sceneSixFragment,
                     getString(R.string.scene_six_info)
+                ),
+                StartSceneItem(
+                    getString(R.string.sceneSevenTitle), R.id.sceneSevenFragment, getString(
+                        R.string.sceneSevenInfo
+                    )
                 )
             )
         }

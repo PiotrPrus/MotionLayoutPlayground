@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToStart|transitionToEnd"
+            app:targetId="@id/sceneSevenBox" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/sceneSevenBox"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <Constraint
+        android:id="@+id/sceneSevenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <CustomAttribute
+            app:attributeName="text"
+            app:customStringValue="We start from here" />
+    </Constraint>
+</ConstraintSet>
+
+<ConstraintSet android:id="@+id/end">
+    <Constraint android:id="@+id/sceneSevenBox"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+<Constraint
+    android:id="@+id/sceneSevenText"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+    <CustomAttribute
+        app:attributeName="text"
+        app:customStringValue="this is end scene text" />
+</Constraint>
+</ConstraintSet>
+
+    </MotionScene>
