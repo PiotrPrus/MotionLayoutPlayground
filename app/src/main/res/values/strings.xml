@@ -17,4 +17,6 @@
     <string name="scene_six_title">Scene 6 - leaf</string>
     <string name="sceneSevenTitle">Scene 7(text)</string>
     <string name="sceneSevenInfo">This scene contains two views, box and text. After box end the transition, the text changes. CustomAttribute with `customStringValue` is used to change text</string>
+    <string name="sceneEightTitle">Scene 8(swipe)</string>
+    <string name="sceneEightInfo">This scene shows swipe effect. We have two transitions here - like/dislike and three slightly different constraintSet - rest, like and dislike</string>
 </resources>

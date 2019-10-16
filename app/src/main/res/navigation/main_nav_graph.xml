@@ -52,4 +52,9 @@
         android:name="com.piotrprus.motionlayoutplayground.fragments.SceneSevenFragment"
         android:label="fragment_scene_seven"
         tools:layout="@layout/fragment_scene_seven" />
+    <fragment
+        android:id="@+id/sceneEightFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneEightFragment"
+        android:label="fragment_scene_eight"
+        tools:layout="@layout/fragment_scene_eight" />
 </navigation>
