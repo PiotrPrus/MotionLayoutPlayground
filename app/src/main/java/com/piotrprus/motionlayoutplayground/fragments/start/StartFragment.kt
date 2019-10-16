@@ -78,8 +78,16 @@ class StartFragment : Fragment() {
                         R.string.sceneSevenInfo
                     )
                 ),
-                StartSceneItem(getString(R.string.sceneEightTitle), R.id.sceneEightFragment, getString(
-                                    R.string.sceneEightInfo))
+                StartSceneItem(
+                    getString(R.string.sceneEightTitle), R.id.sceneEightFragment, getString(
+                        R.string.sceneEightInfo
+                    )
+                ),
+                StartSceneItem(
+                    getString(R.string.sceneNineTitle), R.id.sceneNineFragment, getString(
+                        R.string.sceneNineInfo
+                    )
+                )
             )
         }
 

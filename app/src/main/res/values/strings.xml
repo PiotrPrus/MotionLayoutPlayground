@@ -19,4 +19,6 @@
     <string name="sceneSevenInfo">This scene contains two views, box and text. After box end the transition, the text changes. CustomAttribute with `customStringValue` is used to change text</string>
     <string name="sceneEightTitle">Scene 8(swipe)</string>
     <string name="sceneEightInfo">This scene shows swipe effect. We have two transitions here - like/dislike and three slightly different constraintSet - rest, like and dislike</string>
+    <string name="sceneNineTitle">Scene 9</string>
+    <string name="sceneNineInfo">This scene is similar to scene eight, but upon swipe left/right the view fly off the screen. This is possibly using another constraintSet and auto transitions.</string>
 </resources>
