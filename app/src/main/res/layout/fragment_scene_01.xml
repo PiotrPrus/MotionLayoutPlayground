@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/ml_scene_one"
-    tools:context=".fragments.SceneOneFragment">
+    app:layoutDescription="@xml/ml_scene_01"
+    tools:context=".fragments.Scene01Fragment">
 
     <ImageView
         android:id="@+id/sceneOneRectangle"

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/ml_scene_seven"
-    tools:context=".fragments.SceneSevenFragment">
+    app:layoutDescription="@xml/ml_scene_07"
+    tools:context=".fragments.Scene07Fragment">
 
     <View
         android:id="@+id/sceneSevenBox"

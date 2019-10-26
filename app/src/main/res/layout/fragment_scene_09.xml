@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/ml_scene_four"
-    tools:context=".fragments.SceneFourFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/ml_scene_09"
+    tools:context=".fragments.Scene09Fragment">
 
     <View
-        android:id="@+id/colorBoxSceneFour"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@color/colorBlue" />
+        android:id="@+id/cardSceneNine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

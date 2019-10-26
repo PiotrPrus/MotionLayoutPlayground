@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/ml_scene_eight"
-    tools:context=".fragments.SceneEightFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/ml_scene_06"
+    tools:context=".fragments.Scene06Fragment">
 
-    <View
-        android:id="@+id/cardSceneEight"
-        android:layout_width="0dp"
-        android:layout_height="0dp"/>
+    <ImageView
+        android:id="@+id/autumnLeafSceneSix"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/autumn_leaf"/>
+
 </androidx.constraintlayout.motion.widget.MotionLayout>

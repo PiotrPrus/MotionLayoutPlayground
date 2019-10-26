@@ -12,14 +12,14 @@ import com.piotrprus.motionlayoutplayground.R
 /**
  * A simple [Fragment] subclass.
  */
-class SceneFiveFragment : Fragment() {
+class Scene08Fragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scene_five, container, false)
+        return inflater.inflate(R.layout.fragment_scene_08, container, false)
     }
 
 

@@ -19,47 +19,47 @@
     </fragment>
     <fragment
         android:id="@+id/sceneOneFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneOneFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene01Fragment"
         android:label="fragment_scene_one"
-        tools:layout="@layout/fragment_scene_one" />
+        tools:layout="@layout/fragment_scene_01" />
     <fragment
         android:id="@+id/sceneTwoFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneTwoFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene02Fragment"
         android:label="fragment_scene_two"
-        tools:layout="@layout/fragment_scene_two" />
+        tools:layout="@layout/fragment_scene_02" />
     <fragment
         android:id="@+id/sceneThreeFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneThreeFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene03Fragment"
         android:label="fragment_scene_three"
-        tools:layout="@layout/fragment_scene_three" />
+        tools:layout="@layout/fragment_scene_03" />
     <fragment
         android:id="@+id/sceneFourFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneFourFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene04Fragment"
         android:label="fragment_scene_four"
-        tools:layout="@layout/fragment_scene_four" />
+        tools:layout="@layout/fragment_scene_04" />
     <fragment
         android:id="@+id/sceneFiveFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneFiveFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene05Fragment"
         android:label="fragment_scene_five"
-        tools:layout="@layout/fragment_scene_five" />
+        tools:layout="@layout/fragment_scene_05" />
     <fragment
         android:id="@+id/sceneSixFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneSixFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene06Fragment"
         android:label="fragment_scene_six"
-        tools:layout="@layout/fragment_scene_six" />
+        tools:layout="@layout/fragment_scene_06" />
     <fragment
         android:id="@+id/sceneSevenFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneSevenFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene07Fragment"
         android:label="fragment_scene_seven"
-        tools:layout="@layout/fragment_scene_seven" />
+        tools:layout="@layout/fragment_scene_07" />
     <fragment
         android:id="@+id/sceneEightFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneEightFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene08Fragment"
         android:label="fragment_scene_eight"
-        tools:layout="@layout/fragment_scene_eight" />
+        tools:layout="@layout/fragment_scene_08" />
     <fragment
         android:id="@+id/sceneNineFragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.SceneNineFragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene09Fragment"
         android:label="fragment_scene_nine"
-        tools:layout="@layout/fragment_scene_nine" />
+        tools:layout="@layout/fragment_scene_09" />
 </navigation>
