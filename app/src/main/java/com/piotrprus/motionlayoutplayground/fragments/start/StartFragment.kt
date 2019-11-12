@@ -45,49 +45,50 @@ class StartFragment : Fragment() {
             return listOf(
                 StartSceneItem(
                     resources.getString(R.string.scene_one_title),
-                    R.id.sceneOneFragment,
+                    R.id.scene01Fragment,
                     resources.getString(R.string.scene_one_info)
                 ),
                 StartSceneItem(
-                    getString(R.string.scene_two_title), R.id.sceneTwoFragment, getString(
+                    getString(R.string.scene_two_title), R.id.scene02Fragment, getString(
                         R.string.scene_two_info
                     )
                 ),
                 StartSceneItem(
                     getString(R.string.scene_three_title),
-                    R.id.sceneThreeFragment,
+                    R.id.scene03Fragment,
                     getString(R.string.scene_three_info)
                 ),
                 StartSceneItem(
-                    getString(R.string.scene_four_title), R.id.sceneFourFragment, getString(
+                    getString(R.string.scene_four_title), R.id.scene04Fragment, getString(
                         R.string.scene_four_info
                     )
                 ),
                 StartSceneItem(
-                    getString(R.string.scene_five_title), R.id.sceneFiveFragment, getString(
+                    getString(R.string.scene_five_title), R.id.scene05Fragment, getString(
                         R.string.scene_five_info
                     )
                 ),
                 StartSceneItem(
                     getString(R.string.scene_six_title),
-                    R.id.sceneSixFragment,
+                    R.id.scene06Fragment,
                     getString(R.string.scene_six_info)
                 ),
                 StartSceneItem(
-                    getString(R.string.sceneSevenTitle), R.id.sceneSevenFragment, getString(
+                    getString(R.string.sceneSevenTitle), R.id.scene07Fragment, getString(
                         R.string.sceneSevenInfo
                     )
                 ),
                 StartSceneItem(
-                    getString(R.string.sceneEightTitle), R.id.sceneEightFragment, getString(
+                    getString(R.string.sceneEightTitle), R.id.scene08Fragment, getString(
                         R.string.sceneEightInfo
                     )
                 ),
                 StartSceneItem(
-                    getString(R.string.sceneNineTitle), R.id.sceneNineFragment, getString(
+                    getString(R.string.sceneNineTitle), R.id.scene09Fragment, getString(
                         R.string.sceneNineInfo
                     )
-                )
+                ),
+                    StartSceneItem("Scene 10(square reveal)", R.id.scene10Fragment, "bla bla bla  ")
             )
         }
 
