@@ -77,4 +77,9 @@
         android:name="com.piotrprus.motionlayoutplayground.fragments.Scene10Fragment2"
         android:label="fragment_scene10_fragment2"
         tools:layout="@layout/fragment_scene10_fragment2" />
+    <fragment
+        android:id="@+id/scene11Fragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.scene11.Scene11Fragment"
+        android:label="fragment_scenegriditem_list"
+        tools:layout="@layout/fragment_scenegriditem_list" />
 </navigation>

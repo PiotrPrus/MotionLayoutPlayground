@@ -89,7 +89,8 @@ class StartFragment : Fragment() {
                     )
                 ),
                     StartSceneItem(getString(R.string.scene10Title), R.id.scene10Fragment, getString(
-                                            R.string.scene10Info))
+                                            R.string.scene10Info)),
+                StartSceneItem("test 11", R.id.scene11Fragment, "bla bla    ")
             )
         }
 
