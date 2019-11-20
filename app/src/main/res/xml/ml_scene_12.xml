@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/like"
+        app:constraintSetStart="@id/rest"
+        app:duration="500">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:onTouchUp="autoComplete"
+            app:touchRegionId="@id/topCardScene12"
+            app:touchAnchorId="@id/topCardScene12"
+            app:touchAnchorSide="right" />
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/dislike"
+        app:constraintSetStart="@id/rest"
+        app:duration="500">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:onTouchUp="autoComplete"
+            app:touchRegionId="@id/topCardScene12"
+            app:touchAnchorId="@id/topCardScene12"
+            app:touchAnchorSide="left" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/rest">
+
+        <Constraint
+            android:id="@+id/topCardScene12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintWidth_percent="0.9" >
+            <CustomAttribute app:attributeName="BackgroundColor"
+                app:customColorValue="@color/colorBlue"/>
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/like"
+        app:deriveConstraintsFrom="@id/rest">
+        <Constraint
+            android:id="@+id/topCardScene12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintWidth_percent="0.9"
+            android:translationX="200dp"
+            android:rotation="45">
+            <CustomAttribute app:attributeName="BackgroundColor"
+                app:customColorValue="@color/colorGreen"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/dislike"
+        app:deriveConstraintsFrom="@id/rest">
+        <Constraint
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="200dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintWidth_percent="0.9"
+            android:translationX="-200dp"
+            android:rotation="-45">
+            <CustomAttribute app:attributeName="BackgroundColor"
+                app:customColorValue="@color/colorRed"/>
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>

@@ -23,4 +23,6 @@
     <string name="sceneNineInfo">This scene is similar to scene eight, but upon swipe left/right the view fly off the screen. This is possibly using another constraintSet and auto transitions.</string>
     <string name="scene10Title">Scene 10(square reveal)</string>
     <string name="scene10Info">This scene have very simple animation, but what is important is that at the end of animation it opens second fragment. Check the Scene10Fragment.class to see how to implement TransitionListener</string>
+    <string name="scene11info">Added ItemTouchHelper.Callback to RV to check how the horizontal swipe works. I have problems to implement rotation</string>
+    <string name="scene11title">Scene 11(ItemTouchHelper)</string>
 </resources>

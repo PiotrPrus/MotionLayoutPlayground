@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -88,9 +87,17 @@ class StartFragment : Fragment() {
                         R.string.sceneNineInfo
                     )
                 ),
-                    StartSceneItem(getString(R.string.scene10Title), R.id.scene10Fragment, getString(
-                                            R.string.scene10Info)),
-                StartSceneItem("test 11", R.id.scene11Fragment, "bla bla    ")
+                StartSceneItem(
+                    getString(R.string.scene10Title), R.id.scene10Fragment, getString(
+                        R.string.scene10Info
+                    )
+                ),
+                StartSceneItem("scene 12(infinite swipe)", R.id.scene12Fragment, "test test"),
+                StartSceneItem(
+                    "scene13(RV with ML)",
+                    R.id.scene13Fragment,
+                    "test ML in recyclerView cell"
+                )
             )
         }
 
