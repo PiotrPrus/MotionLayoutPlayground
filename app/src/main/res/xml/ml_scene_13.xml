@@ -9,8 +9,16 @@
         <OnSwipe
             app:dragDirection="dragRight"
             app:onTouchUp="autoCompleteToStart"
-            app:touchAnchorId="@id/cardViewScene11"
+            app:touchAnchorId="@id/cardViewScene13"
             app:touchAnchorSide="right" />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="1.0"
+                app:framePosition="25"
+                app:motionTarget="@+id/cardScene13LikeOverlay" />
+        </KeyFrameSet>
+
     </Transition>
 
     <Transition
@@ -19,37 +27,70 @@
         app:duration="500">
         <OnSwipe
             app:dragDirection="dragLeft"
-            app:touchAnchorId="@id/cardViewScene11"
+            app:touchAnchorId="@id/cardViewScene13"
             app:touchAnchorSide="left" />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0.5"
+                app:framePosition="25"
+                app:motionTarget="@+id/cardScene13DislikeOverlay" />
+        </KeyFrameSet>
     </Transition>
 
-    <Transition app:constraintSetStart="@id/like"
+    <Transition
+        app:autoTransition="animateToEnd"
         app:constraintSetEnd="@id/goneRight"
-        app:duration="300"
-        app:autoTransition="animateToEnd"/>
+        app:constraintSetStart="@id/like"
+        app:duration="300" />
 
-    <Transition app:constraintSetStart="@id/dislike"
+    <Transition
+        app:autoTransition="animateToEnd"
         app:constraintSetEnd="@id/goneLeft"
-        app:duration="300"
-        app:autoTransition="animateToEnd"/>
+        app:constraintSetStart="@id/dislike"
+        app:duration="300" />
 
     <ConstraintSet android:id="@+id/rest">
 
         <Constraint
-            android:id="@+id/cardViewScene11"
+            android:id="@+id/cardViewScene13"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/colorBlue"
+            app:cardCornerRadius="10dp"
             app:layout_constraintHeight_percent="0.9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.9">
-            <CustomAttribute
-                app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorBlue" />
+            app:layout_constraintWidth_percent="0.9" />
+
+        <Constraint android:id="@+id/cardScene13LikeOverlay">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
+                app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
+                app:layout_constraintStart_toStartOf="@id/cardViewScene13"
+                app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
+
+            <PropertySet android:alpha="0.0" />
+            <Transform android:elevation="10dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/cardScene13DislikeOverlay">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
+                app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
+                app:layout_constraintStart_toStartOf="@id/cardViewScene13"
+                app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
+
+            <PropertySet android:alpha="0.0" />
+            <Transform android:elevation="10dp" />
         </Constraint>
 
     </ConstraintSet>
@@ -58,7 +99,7 @@
         android:id="@+id/like"
         app:deriveConstraintsFrom="@id/rest">
         <Constraint
-            android:id="@+id/cardViewScene11"
+            android:id="@+id/cardViewScene13"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="300dp"
@@ -66,11 +107,21 @@
             app:layout_constraintHeight_percent="0.9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.9">
+            app:layout_constraintWidth_percent="0.9" />
 
-            <CustomAttribute
-                app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorGreen" />
+        <Constraint android:id="@+id/cardScene13LikeOverlay">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
+                app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
+                app:layout_constraintStart_toStartOf="@id/cardViewScene13"
+                app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
+
+            <PropertySet android:alpha="1.0" />
+            <Transform
+                android:elevation="10dp"
+                android:rotation="45" />
         </Constraint>
     </ConstraintSet>
 
@@ -78,7 +129,7 @@
         android:id="@+id/goneRight"
         app:deriveConstraintsFrom="@id/like">
         <Constraint
-            android:id="@+id/cardViewScene11"
+            android:id="@+id/cardViewScene13"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="600dp"
@@ -87,11 +138,18 @@
             app:layout_constraintHeight_percent="0.9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.9">
+            app:layout_constraintWidth_percent="0.9" />
 
-            <CustomAttribute
-                app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorGreen" />
+        <Constraint android:id="@+id/cardScene13LikeOverlay">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
+                app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
+                app:layout_constraintStart_toStartOf="@id/cardViewScene13"
+                app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
+
+            <PropertySet android:alpha="1.0" />
         </Constraint>
     </ConstraintSet>
 
@@ -99,18 +157,23 @@
         android:id="@+id/dislike"
         app:deriveConstraintsFrom="@id/rest">
         <Constraint
-            android:id="@+id/cardViewScene11"
+            android:id="@+id/cardViewScene13"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="300dp"
-            android:rotation="-45"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.9"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.9">
-            <CustomAttribute
-                app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorRed" />
+
+            <Transform
+                android:rotation="-45" />
+        </Constraint>
+
+        <Constraint android:id="@+id/cardScene13DislikeOverlay">
+            <PropertySet android:alpha="1.0" />
+            <Transform android:elevation="10dp"
+                android:rotation="-45"/>
         </Constraint>
     </ConstraintSet>
 
@@ -118,7 +181,7 @@
         android:id="@+id/goneLeft"
         app:deriveConstraintsFrom="@id/rest">
         <Constraint
-            android:id="@+id/cardViewScene11"
+            android:id="@+id/cardViewScene13"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="600dp"
@@ -127,10 +190,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.9"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.9">
-            <CustomAttribute
-                app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorRed" />
+            app:layout_constraintWidth_percent="0.9" />
+
+        <Constraint android:id="@+id/cardScene13DislikeOverlay">
+            <PropertySet android:alpha="1.0" />
         </Constraint>
     </ConstraintSet>
 

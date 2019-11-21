@@ -9,9 +9,9 @@
         <OnSwipe
             app:dragDirection="dragRight"
             app:onTouchUp="autoComplete"
-            app:touchRegionId="@id/topCardScene12"
             app:touchAnchorId="@id/topCardScene12"
-            app:touchAnchorSide="right" />
+            app:touchAnchorSide="right"
+            app:touchRegionId="@id/topCardScene12" />
     </Transition>
 
     <Transition
@@ -21,27 +21,57 @@
         <OnSwipe
             app:dragDirection="dragLeft"
             app:onTouchUp="autoComplete"
-            app:touchRegionId="@id/topCardScene12"
             app:touchAnchorId="@id/topCardScene12"
-            app:touchAnchorSide="left" />
+            app:touchAnchorSide="left"
+            app:touchRegionId="@id/topCardScene12" />
     </Transition>
+
+    <Transition
+        app:constraintSetStart="@id/like"
+        app:constraintSetEnd="@id/offScreenLike"
+        app:autoTransition="animateToEnd"
+        app:duration="300"/>
+
+    <Transition
+        app:constraintSetStart="@id/dislike"
+        app:constraintSetEnd="@id/offScreenDislike"
+        app:autoTransition="animateToEnd"
+        app:duration="300"/>
 
     <ConstraintSet android:id="@+id/rest">
 
-        <Constraint
-            android:id="@+id/topCardScene12"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHeight_percent="0.9"
-            app:layout_constraintWidth_percent="0.9" >
-            <CustomAttribute app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorBlue"/>
+        <Constraint android:id="@+id/topCardScene12">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+            <CustomAttribute
+                app:attributeName="BackgroundColor"
+                app:customColorValue="@color/colorAutumnBrown" />
+        </Constraint>
+
+        <Constraint android:id="@+id/bottomCardScene12">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+            <CustomAttribute
+                app:attributeName="BackgroundColor"
+                app:customColorValue="@color/colorGrey" />
         </Constraint>
 
     </ConstraintSet>
@@ -49,44 +79,71 @@
     <ConstraintSet
         android:id="@+id/like"
         app:deriveConstraintsFrom="@id/rest">
-        <Constraint
-            android:id="@+id/topCardScene12"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHeight_percent="0.9"
-            app:layout_constraintWidth_percent="0.9"
-            android:translationX="200dp"
-            android:rotation="45">
-            <CustomAttribute app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorGreen"/>
+        <Constraint android:id="@+id/topCardScene12">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:rotation="45"
+                android:translationX="200dp"
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+
+            <CustomAttribute
+                app:attributeName="BackgroundColor"
+                app:customColorValue="@color/colorGreen" />
         </Constraint>
+
+        <Constraint android:id="@id/bottomCardScene12" />
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/offScreenLike"
+        app:deriveConstraintsFrom="@id/like">
+        <Constraint android:id="@id/topCardScene12">
+            <Layout android:layout_marginStart="400dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/bottomCardScene12" />
     </ConstraintSet>
 
     <ConstraintSet
         android:id="@+id/dislike"
         app:deriveConstraintsFrom="@id/rest">
-        <Constraint
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="200dp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_percent="0.9"
-            app:layout_constraintWidth_percent="0.9"
-            android:translationX="-200dp"
-            android:rotation="-45">
-            <CustomAttribute app:attributeName="BackgroundColor"
-                app:customColorValue="@color/colorRed"/>
+        <Constraint android:id="@+id/topCardScene12">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="200dp"
+                android:layout_marginBottom="20dp"
+                android:rotation="-45"
+                android:translationX="-200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.9" />
+            <CustomAttribute
+                app:attributeName="BackgroundColor"
+                app:customColorValue="@color/colorRed" />
         </Constraint>
+        <Constraint android:id="@id/bottomCardScene12" />
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/offScreenDislike"
+        app:deriveConstraintsFrom="@id/dislike">
+        <Constraint android:id="@id/topCardScene12">
+            <Layout android:layout_marginStart="-400dp" />
+        </Constraint>
+
+        <Constraint android:id="@id/bottomCardScene12" />
     </ConstraintSet>
 
 </MotionScene>
