@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.piotrprus.motionlayoutplayground.helper.InterceptTouchMotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/interceptML"
     android:layout_width="match_parent"
+    android:layout_height="300dp"
     android:clipChildren="false"
     android:clipToPadding="false"
-    app:layoutDescription="@xml/ml_scene_13"
-    android:layout_height="300dp">
+    app:motionDebug="SHOW_PROGRESS"
+    app:layoutDescription="@xml/ml_scene_13">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/cardViewScene13"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="10dp"
         android:background="@color/colorGrey"
         app:cardBackgroundColor="@color/colorBlue"
+        app:cardCornerRadius="10dp"
         app:cardElevation="4dp">
 
         <LinearLayout
@@ -38,25 +41,25 @@
                 android:textAppearance="?attr/textAppearanceListItem"
                 tools:text="test" />
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
     <View
         android:id="@+id/cardScene13LikeOverlay"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="@id/cardViewScene13"
+        android:background="@drawable/frame_overlay_like"
         app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
-        app:layout_constraintStart_toStartOf="@id/cardViewScene13"
         app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
-        android:background="@drawable/frame_overlay_like"/>
+        app:layout_constraintStart_toStartOf="@id/cardViewScene13"
+        app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
 
     <View
         android:id="@+id/cardScene13DislikeOverlay"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="@id/cardViewScene13"
+        android:background="@drawable/frame_overlay_dislike"
         app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
-        app:layout_constraintStart_toStartOf="@id/cardViewScene13"
         app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
-        android:background="@drawable/frame_overlay_dislike"/>
-</androidx.constraintlayout.motion.widget.MotionLayout>
+        app:layout_constraintStart_toStartOf="@id/cardViewScene13"
+        app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
+</com.piotrprus.motionlayoutplayground.helper.InterceptTouchMotionLayout>

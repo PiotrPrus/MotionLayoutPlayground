@@ -5,7 +5,7 @@
     <Transition
         app:constraintSetEnd="@id/like"
         app:constraintSetStart="@id/rest"
-        app:duration="500">
+        app:duration="200">
         <OnSwipe
             app:dragDirection="dragRight"
             app:onTouchUp="autoCompleteToStart"
@@ -24,7 +24,7 @@
     <Transition
         app:constraintSetEnd="@id/dislike"
         app:constraintSetStart="@id/rest"
-        app:duration="500">
+        app:duration="200">
         <OnSwipe
             app:dragDirection="dragLeft"
             app:touchAnchorId="@id/cardViewScene13"
@@ -42,13 +42,13 @@
         app:autoTransition="animateToEnd"
         app:constraintSetEnd="@id/goneRight"
         app:constraintSetStart="@id/like"
-        app:duration="300" />
+        app:duration="200" />
 
     <Transition
         app:autoTransition="animateToEnd"
         app:constraintSetEnd="@id/goneLeft"
         app:constraintSetStart="@id/dislike"
-        app:duration="300" />
+        app:duration="200" />
 
     <ConstraintSet android:id="@+id/rest">
 
