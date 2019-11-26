@@ -15,42 +15,48 @@
         app:duration="500" />
 
     <Transition
-        app:constraintSetStart="@id/buttonAndTextAppears"
         app:constraintSetEnd="@id/prepareToLaunch"
+        app:constraintSetStart="@id/buttonAndTextAppears"
         app:duration="1000">
 
         <KeyFrameSet>
             <KeyCycle
+                android:rotation="0"
                 app:framePosition="0"
                 app:motionTarget="@+id/scene14Rocket"
-                app:wavePeriod="0"
                 app:waveOffset="0"
-                app:waveShape="sin"
-                android:rotation="0" />
+                app:wavePeriod="0"
+                app:waveShape="sin" />
             <KeyCycle
+                android:rotation="15"
                 app:framePosition="50"
                 app:motionTarget="@+id/scene14Rocket"
-                app:wavePeriod="1"
                 app:waveOffset="0"
-                app:waveShape="sin"
-                android:rotation="15" />
+                app:wavePeriod="1"
+                app:waveShape="sin" />
             <KeyCycle
+                android:rotation="-15"
                 app:framePosition="75"
                 app:motionTarget="@+id/scene14Rocket"
-                app:wavePeriod="3"
                 app:waveOffset="0"
-                app:waveShape="sin"
-                android:rotation="-15" />
+                app:wavePeriod="3"
+                app:waveShape="sin" />
             <KeyCycle
+                android:rotation="0"
                 app:framePosition="100"
                 app:motionTarget="@+id/scene14Rocket"
-                app:wavePeriod="0"
                 app:waveOffset="0"
-                app:waveShape="sin"
-                android:rotation="0" />
+                app:wavePeriod="0"
+                app:waveShape="sin" />
         </KeyFrameSet>
 
     </Transition>
+
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@id/flyOff"
+        app:constraintSetStart="@id/prepareToLaunch"
+        app:duration="1000" />
 
     <ConstraintSet android:id="@+id/beginning">
         <Constraint
@@ -103,10 +109,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="40dp"
                 android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/scene14SecondaryText"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/scene14SecondaryText" />
             <PropertySet android:visibility="invisible" />
         </Constraint>
     </ConstraintSet>
@@ -133,8 +139,6 @@
 
         <Constraint android:id="@+id/scene14Button">
             <PropertySet android:visibility="invisible" />
-            <Transform android:scaleX="2.0"
-                android:scaleY="2.0"/>
         </Constraint>
 
         <Constraint android:id="@+id/scene14Congratulations">
@@ -143,6 +147,18 @@
 
         <Constraint android:id="@+id/scene14SecondaryText">
             <PropertySet android:alpha="0.0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/flyOff"
+        app:deriveConstraintsFrom="@id/prepareToLaunch">
+        <Constraint android:id="@+id/scene14Rocket">
+            <Layout app:layout_constraintBottom_toTopOf="parent"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
         </Constraint>
     </ConstraintSet>
 
