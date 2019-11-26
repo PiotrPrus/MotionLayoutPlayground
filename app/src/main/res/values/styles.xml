@@ -14,4 +14,9 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="PrimaryButtonStyle.White">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
 </resources>
