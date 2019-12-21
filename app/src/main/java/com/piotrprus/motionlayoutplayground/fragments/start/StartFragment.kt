@@ -97,7 +97,8 @@ class StartFragment : Fragment() {
                     "scene13(RV with ML)",
                     R.id.scene13Fragment,
                     "test ML in recyclerView cell"
-                )
+                ),
+                StartSceneItem("scene 14(rocket)", R.id.scene14Fragment, "Workshop animation")
             )
         }
 

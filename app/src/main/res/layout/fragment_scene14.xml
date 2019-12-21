@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rocketBackgroundBlue"
+    app:layoutDescription="@xml/ml_scene_14"
+    tools:context=".fragments.Scene14Fragment">
+
+    <ImageView
+        android:id="@+id/scene14Rocket"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rocket_image"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/scene14Button"
+        style="@style/PrimaryButtonStyle.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's go"
+        android:textColor="@color/rocketBackgroundBlue"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/scene14Congratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations !"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/scene14SecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You're great animator. Let's go out there to explore more cool features of motion layout. :) "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/scene14Bubble1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="0.0"
+        android:background="@drawable/rocket_bubble"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scene14Bubble4" />
+
+    <View
+        android:id="@+id/scene14Bubble2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0.0"
+        android:background="@drawable/rocket_bubble"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scene14Bubble4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/scene14Bubble3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0.0"
+        android:background="@drawable/rocket_bubble"
+        app:layout_constraintBottom_toBottomOf="@+id/scene14Bubble4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <View
+        android:id="@+id/scene14Bubble4"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0.0"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rocket_bubble"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/scene14Bubble5"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0.0"
+        android:background="@drawable/rocket_bubble"
+        app:layout_constraintBottom_toBottomOf="@+id/scene14Bubble6"
+        app:layout_constraintEnd_toEndOf="@+id/scene14Bubble1"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scene14Bubble2" />
+
+    <View
+        android:id="@+id/scene14Bubble6"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0.0"
+        android:background="@drawable/rocket_bubble"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scene14Bubble1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scene14Bubble2" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
