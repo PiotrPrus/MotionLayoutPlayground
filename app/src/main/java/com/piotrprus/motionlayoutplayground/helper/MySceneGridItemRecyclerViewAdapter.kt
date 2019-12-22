@@ -30,7 +30,7 @@ class MySceneGridItemRecyclerViewAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_scene_13_grid, parent, false)
-        return ViewHolder(view, removeItemListener)
+        return ViewHolder(view)
     }
 
     private val removeItemListener: (Int) -> Unit = {
@@ -55,8 +55,7 @@ class MySceneGridItemRecyclerViewAdapter(
 
     override fun getItemCount(): Int = mValues.size
 
-    inner class ViewHolder(val mView: View,
-                           removeItemListener: (Int) -> Unit) :
+    inner class ViewHolder(val mView: View) :
         RecyclerView.ViewHolder(mView) {
         val mIdView: TextView = mView.item_number
         val mContentView: TextView = mView.content
@@ -68,7 +67,7 @@ class MySceneGridItemRecyclerViewAdapter(
         }
 
         fun bind() {
-            (mView as InterceptTouchMotionLayout).apply {
+            (mView as CustomMotionLayout).apply {
                 setTransitionListener(object : MotionLayout.TransitionListener {
                     override fun onTransitionTrigger(
                         p0: MotionLayout?,
@@ -78,32 +77,29 @@ class MySceneGridItemRecyclerViewAdapter(
                     ) {
                     }
 
-                    override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
+                    override fun onTransitionChange(
+                        p0: MotionLayout?,
+                        p1: Int,
+                        p2: Int,
+                        p3: Float
+                    ) {
                         when {
                             p1 == R.id.rest && p3 > 0f -> {
                                 animationListener(AnimationState.STARTED)
-                                isInProgress = true
                             }
                         }
                     }
 
                     override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
                         animationListener(AnimationState.COMPLETED)
-                        isInProgress = false
                         if (p1 == R.id.goneRight || p1 == R.id.goneLeft) {
                             Log.d("Adapter", "Remove item at position: $position")
                             removeItemListener(position)
                         }
                     }
 
-                    override fun onTransitionStarted(p0: MotionLayout?, startId: Int, endId: Int) {
-
-                    }
+                    override fun onTransitionStarted(p0: MotionLayout?, startId: Int, endId: Int) {}
                 })
-                onMotionItemClick {
-                    Log.d("motionLayout", "clickAction in motionLayout")
-                    onItemClickedInVH?.invoke(position.toString())
-                }
             }
         }
     }

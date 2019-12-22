@@ -5,7 +5,7 @@
     <Transition
         app:constraintSetEnd="@id/like"
         app:constraintSetStart="@id/rest"
-        app:duration="200">
+        app:duration="100">
         <OnSwipe
             app:dragDirection="dragRight"
             app:onTouchUp="autoCompleteToStart"
@@ -22,9 +22,18 @@
     </Transition>
 
     <Transition
+        app:constraintSetEnd="@id/fullscreen"
+        app:constraintSetStart="@id/rest"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@+id/cardViewScene13" />
+    </Transition>
+
+    <Transition
         app:constraintSetEnd="@id/dislike"
         app:constraintSetStart="@id/rest"
-        app:duration="200">
+        app:duration="100">
         <OnSwipe
             app:dragDirection="dragLeft"
             app:touchAnchorId="@id/cardViewScene13"
@@ -42,13 +51,13 @@
         app:autoTransition="animateToEnd"
         app:constraintSetEnd="@id/goneRight"
         app:constraintSetStart="@id/like"
-        app:duration="200" />
+        app:duration="50" />
 
     <Transition
         app:autoTransition="animateToEnd"
         app:constraintSetEnd="@id/goneLeft"
         app:constraintSetStart="@id/dislike"
-        app:duration="200" />
+        app:duration="50" />
 
     <ConstraintSet android:id="@+id/rest">
 
@@ -125,6 +134,13 @@
         </Constraint>
     </ConstraintSet>
 
+    <ConstraintSet android:id="@+id/fullscreen"
+        app:deriveConstraintsFrom="@id/rest">
+        <Constraint
+            android:id="@+id/cardViewScene13"
+            />
+    </ConstraintSet>
+
     <ConstraintSet
         android:id="@+id/goneRight"
         app:deriveConstraintsFrom="@id/like">
@@ -166,14 +182,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.9">
 
-            <Transform
-                android:rotation="-45" />
+            <Transform android:rotation="-45" />
         </Constraint>
 
         <Constraint android:id="@+id/cardScene13DislikeOverlay">
             <PropertySet android:alpha="1.0" />
-            <Transform android:elevation="10dp"
-                android:rotation="-45"/>
+            <Transform
+                android:elevation="10dp"
+                android:rotation="-45" />
         </Constraint>
     </ConstraintSet>
 
