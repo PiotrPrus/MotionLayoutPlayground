@@ -22,15 +22,6 @@
     </Transition>
 
     <Transition
-        app:constraintSetEnd="@id/fullscreen"
-        app:constraintSetStart="@id/rest"
-        app:duration="1000">
-        <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@+id/cardViewScene13" />
-    </Transition>
-
-    <Transition
         app:constraintSetEnd="@id/dislike"
         app:constraintSetStart="@id/rest"
         app:duration="100">
@@ -132,13 +123,6 @@
                 android:elevation="10dp"
                 android:rotation="45" />
         </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/fullscreen"
-        app:deriveConstraintsFrom="@id/rest">
-        <Constraint
-            android:id="@+id/cardViewScene13"
-            />
     </ConstraintSet>
 
     <ConstraintSet

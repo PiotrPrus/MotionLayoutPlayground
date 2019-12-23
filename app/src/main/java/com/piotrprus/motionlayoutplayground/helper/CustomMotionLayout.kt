@@ -32,7 +32,7 @@ class CustomMotionLayout : MotionLayout {
         var tracker: VelocityTracker? = null
         override fun recycle() {
             tracker?.let {
-                recycle()
+                it.recycle()
                 tracker = null
             }
         }

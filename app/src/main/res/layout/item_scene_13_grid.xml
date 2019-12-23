@@ -8,7 +8,6 @@
     android:layout_height="300dp"
     android:clipChildren="false"
     android:clipToPadding="false"
-    app:motionDebug="SHOW_PROGRESS"
     app:layoutDescription="@xml/ml_scene_13">
 
     <androidx.cardview.widget.CardView
