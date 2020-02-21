@@ -22,7 +22,7 @@ import com.piotrprus.motionlayoutplayground.helper.MySceneGridItemRecyclerViewAd
 class Scene13Fragment : Fragment() {
 
     private lateinit var recyclerView: InterceptScrollingRecyclerView
-    private val animationStateLiveData = MutableLiveData<AnimationState>()
+    private val animationStateLiveData = MutableLiveData<Pair<AnimationState, String>>()
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -45,25 +45,29 @@ class Scene13Fragment : Fragment() {
             adapter =
                 MySceneGridItemRecyclerViewAdapter(
                     DummyContent.ITEMS
-                ) {
-                    Log.d("Scene13Fragment", "Animation state: $it")
-                    animationStateLiveData.value = it
+                ) { state, tag ->
+                    Log.d("Scene13Fragment", "Animation state: $state")
+                    animationStateLiveData.value = state to tag
                 }
         }
         return recyclerView
     }
 
     private fun initObservers() {
-        animationStateLiveData.observe(viewLifecycleOwner, Observer { state ->
-            when (state) {
-                AnimationState.STARTED -> {
+        animationStateLiveData.observe(viewLifecycleOwner, Observer { pair ->
+            when (pair.first) {
+                AnimationState.STARTED, AnimationState.IN_PROGRESS -> {
                     recyclerView.swipeFrozen = true
-                    (recyclerView.layoutManager as GridLayoutManager).getChildAt(0)?.elevation = 50f
                 }
                 else -> {
                     recyclerView.swipeFrozen = false
                 }
             }
+            recyclerView.findViewWithTag<View>(pair.second).elevation =
+                when (pair.first) {
+                    AnimationState.STARTED, AnimationState.IN_PROGRESS -> 1f
+                    AnimationState.COMPLETED -> 0f
+                }
         })
     }
 }
