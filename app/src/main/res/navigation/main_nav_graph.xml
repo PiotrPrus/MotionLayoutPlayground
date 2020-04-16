@@ -78,11 +78,6 @@
         android:label="fragment_scene10_fragment2"
         tools:layout="@layout/fragment_scene10_fragment2" />
     <fragment
-        android:id="@+id/scene11Fragment"
-        android:name="com.piotrprus.motionlayoutplayground.fragments.scene11.Scene11Fragment"
-        android:label="fragment_scenegriditem_list"
-        tools:layout="@layout/fragment_scene11_list" />
-    <fragment
         android:id="@+id/scene12Fragment"
         android:name="com.piotrprus.motionlayoutplayground.fragments.Scene12Fragment"
         android:label="fragment_scene12"
@@ -97,4 +92,9 @@
         android:name="com.piotrprus.motionlayoutplayground.fragments.Scene14Fragment"
         android:label="fragment_scene14"
         tools:layout="@layout/fragment_scene14" />
+    <fragment
+        android:id="@+id/scene15Fragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene15Fragment"
+        android:label="fragment_scene15"
+        tools:layout="@layout/fragment_scene15" />
 </navigation>

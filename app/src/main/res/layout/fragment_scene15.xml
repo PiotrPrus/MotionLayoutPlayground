@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.piotrprus.motionlayoutplayground.helper.InterceptMotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayoutFragment15"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/ml_scene_15"
+    tools:context=".fragments.Scene15Fragment">
+
+    <ImageView
+        android:id="@+id/scene15Square"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/blue_rectangle" />
+
+</com.piotrprus.motionlayoutplayground.helper.InterceptMotionLayout>

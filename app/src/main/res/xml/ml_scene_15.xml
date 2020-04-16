@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end"
+        app:duration="1000">
+       <OnSwipe
+           app:dragDirection="dragDown"
+           app:touchAnchorSide="top"
+           app:touchRegionId="@id/scene15Square" />
+    </Transition>
+
+<!--    <Transition-->
+<!--        app:constraintSetStart="@id/start"-->
+<!--        app:constraintSetEnd="@id/scaleUp"-->
+<!--        app:duration="500">-->
+<!--        <OnClick-->
+<!--            app:targetId="@id/scene15Square"-->
+<!--            app:clickAction="toggle"/>-->
+<!--    </Transition>-->
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/scene15Square"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/scene15Square"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/scaleUp"
+        app:deriveConstraintsFrom="@id/start">
+        <Constraint android:id="@id/scene15Square"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleY="2"
+            android:scaleX="2"/>
+    </ConstraintSet>
+
+</MotionScene>

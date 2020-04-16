@@ -98,7 +98,8 @@ class StartFragment : Fragment() {
                     R.id.scene13Fragment,
                     "test ML in recyclerView cell"
                 ),
-                StartSceneItem("scene 14(rocket)", R.id.scene14Fragment, "Workshop animation")
+                StartSceneItem("scene 14(rocket)", R.id.scene14Fragment, "Workshop animation"),
+                StartSceneItem("scene15 (swipe and click)", R.id.scene15Fragment, "Test onClick and onSwipe on one item")
             )
         }
 
