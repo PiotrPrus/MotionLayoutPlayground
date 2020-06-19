@@ -55,6 +55,4 @@ class InterceptMotionLayout : MotionLayout {
         val diffY = abs(startY.minus(endY))
         return (diffX < 200 && diffY < 200)
     }
-
-
 }
