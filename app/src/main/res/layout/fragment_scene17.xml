@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayoutFragment17"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/ml_scene_17"
+    tools:context=".fragments.Scene17Fragment">
+
+    <ImageView
+        android:id="@+id/blueBoxScene17"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/blue_rectangle" />
+
+    <ImageView
+        android:id="@+id/redBoxScene17"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/red_rectangle"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

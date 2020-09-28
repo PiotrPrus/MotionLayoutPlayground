@@ -99,7 +99,9 @@ class StartFragment : Fragment() {
                     "test ML in recyclerView cell"
                 ),
                 StartSceneItem("scene 14(rocket)", R.id.scene14Fragment, "Workshop animation"),
-                StartSceneItem("scene15 (swipe and click)", R.id.scene15Fragment, "Test onClick and onSwipe on one item")
+                StartSceneItem("scene15 (swipe and click)", R.id.scene15Fragment, "Test onClick and onSwipe on one item"),
+                StartSceneItem("IME Api", R.id.scene16Fragment, "test new ime methods available only in android R (SDK 30)"),
+                StartSceneItem("Flip card", R.id.scene17Fragment, "Try to flip card on click")
             )
         }
 

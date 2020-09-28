@@ -97,4 +97,13 @@
         android:name="com.piotrprus.motionlayoutplayground.fragments.Scene15Fragment"
         android:label="fragment_scene15"
         tools:layout="@layout/fragment_scene15" />
+    <fragment
+        android:id="@+id/scene16Fragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene16Fragment"
+        android:label="fragment_scene16"
+        tools:layout="@layout/fragment_scene16" />
+    <fragment
+        android:id="@+id/scene17Fragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.Scene17Fragment"
+        android:label="Scene17Fragment" />
 </navigation>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToEnd"
+            app:targetId="@id/blueBoxScene17" />
+        <KeyFrameSet>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="15"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="15"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="49"
+                android:alpha="1.0"/>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="50"
+                android:alpha="0.0"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="50"
+                android:alpha="0.0"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="51"
+                android:alpha="1.0"/>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="85"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="85"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="1000">
+        <OnClick
+            app:clickAction="transitionToStart"
+            app:targetId="@id/redBoxScene17" />
+        <KeyFrameSet>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="15"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="15"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="49"
+                android:alpha="1.0"/>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="50"
+                android:alpha="0.0"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="50"
+                android:alpha="0.0"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="51"
+                android:alpha="1.0"/>
+            <KeyAttribute app:motionTarget="@id/blueBoxScene17"
+                app:framePosition="85"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+            <KeyAttribute app:motionTarget="@id/redBoxScene17"
+                app:framePosition="85"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/blueBoxScene17">
+            <Layout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <PropertySet android:alpha="1.0"
+                android:visibility="visible"/>
+        </Constraint>
+        <Constraint android:id="@+id/redBoxScene17">
+            <Layout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <PropertySet android:alpha="0.0"
+                android:visibility="invisible"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end"
+        app:deriveConstraintsFrom="@id/start">
+        <Constraint android:id="@+id/redBoxScene17">
+            <Transform android:rotationY="180"/>
+            <PropertySet android:alpha="1.0"
+                android:visibility="visible"/>
+        </Constraint>
+        <Constraint android:id="@+id/blueBoxScene17">
+            <Transform android:rotationY="180"/>
+            <PropertySet android:alpha="0.0"
+                android:visibility="invisible"/>
+        </Constraint>
+    </ConstraintSet>
+
+
+</MotionScene>
