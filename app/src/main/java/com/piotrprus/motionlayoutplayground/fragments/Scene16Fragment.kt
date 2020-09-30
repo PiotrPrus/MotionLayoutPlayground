@@ -27,13 +27,12 @@ class Scene16Fragment : Fragment() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 val isKeyboardVisible =
                     requireView().rootWindowInsets.isVisible(WindowInsets.Type.ime())
-
-                Log.d(
-                    "IME",
-                    "keyboard visible: $isKeyboardVisible"
-                )
-            } else {
-                Log.d("IME", "The current SDK is too old to handle the ime type")
+                val controller = requireView().windowInsetsController
+                if (isKeyboardVisible) {
+                    controller?.hide(WindowInsets.Type.ime())
+                } else {
+                    controller?.show(WindowInsets.Type.ime())
+                }
             }
         }
     }

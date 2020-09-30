@@ -106,4 +106,9 @@
         android:id="@+id/scene17Fragment"
         android:name="com.piotrprus.motionlayoutplayground.fragments.Scene17Fragment"
         android:label="Scene17Fragment" />
+    <fragment
+        android:id="@+id/scene18Fragment"
+        android:name="com.piotrprus.motionlayoutplayground.fragments.scene18.Scene18Fragment"
+        android:label="fragment_scene18"
+        tools:layout="@layout/fragment_scene18" />
 </navigation>
