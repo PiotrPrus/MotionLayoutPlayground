@@ -8,14 +8,14 @@ import androidx.constraintlayout.motion.widget.MotionLayout
 import kotlin.math.abs
 
 class InterceptMotionLayout : MotionLayout {
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(
+    constructor(context: Context) : super(context)
+    constructor(context: Context, attrs: AttributeSet?) : super(
         context,
         attrs
     )
 
     constructor(
-        context: Context?,
+        context: Context,
         attrs: AttributeSet?,
         defStyleAttr: Int
     ) : super(context, attrs, defStyleAttr)

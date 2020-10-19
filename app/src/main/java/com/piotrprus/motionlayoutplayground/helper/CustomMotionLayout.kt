@@ -5,16 +5,17 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.VelocityTracker
 import androidx.constraintlayout.motion.widget.MotionLayout
+import kotlin.math.abs
 
 class CustomMotionLayout : MotionLayout {
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(
+    constructor(context: Context) : super(context)
+    constructor(context: Context, attrs: AttributeSet?) : super(
         context,
         attrs
     )
 
     constructor(
-        context: Context?,
+        context: Context,
         attrs: AttributeSet?,
         defStyleAttr: Int
     ) : super(context, attrs, defStyleAttr)
@@ -22,6 +23,68 @@ class CustomMotionLayout : MotionLayout {
     override fun obtainVelocityTracker(): MotionTracker {
         return MyTracker.obtain()
     }
+
+    private var startX: Float? = null
+    private var startY: Float? = null
+    var clickListener: (() -> Unit)? = null
+
+    override fun dispatchTouchEvent(event: MotionEvent?): Boolean {
+        val dispatch = super.dispatchTouchEvent(event)
+        event?.let { motionEvent ->
+            when (motionEvent.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    startX = motionEvent.x
+                    startY = motionEvent.y
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    val endX = motionEvent.x
+                    val endY = motionEvent.y
+                    if (isUserMovingFinger(startX, endX, startY, endY)) {
+                        clearStartPosition()
+                    }
+                }
+                MotionEvent.ACTION_UP -> {
+                    val endX = motionEvent.x
+                    val endY = motionEvent.y
+                    if (isAClick(startX, endX, startY, endY)) {
+                        doAClick()
+                        return dispatch
+                    }
+                }
+            }
+        }
+        return dispatch
+    }
+
+    private fun isUserMovingFinger(startX: Float?, endX: Float, startY: Float?, endY: Float): Boolean {
+        if (startX == null || startY == null) return true
+        return !isTouchInClickArea(startX, endX, startY, endY)
+    }
+
+    private fun clearStartPosition() {
+        startX = null
+        startY = null
+    }
+
+    private fun doAClick() {
+        clickListener?.invoke()
+    }
+
+    private fun isAClick(startX: Float?, endX: Float, startY: Float?, endY: Float): Boolean {
+        return when {
+            startX == null || startY == null -> false
+            isDuringSwipe() -> false
+            else -> isTouchInClickArea(startX, endX, startY, endY)
+        }
+    }
+
+    private fun isTouchInClickArea(startX: Float, endX: Float, startY: Float, endY: Float): Boolean {
+        val diffX = abs(startX.minus(endX))
+        val diffY = abs(startY.minus(endY))
+        return (diffX <= MAX_DISTANCE_DEFINING_CLICK && diffY <= MAX_DISTANCE_DEFINING_CLICK)
+    }
+
+    private fun isDuringSwipe() = this.progress > MIN_PROGRESS_DEFINING_SWIPE
 
     /**
      * The only functional changes to this class are added null-checks and recursion avoidance in
@@ -82,5 +145,10 @@ class CustomMotionLayout : MotionLayout {
                 return me
             }
         }
+    }
+
+    companion object {
+        const val MAX_DISTANCE_DEFINING_CLICK = 200
+        const val MIN_PROGRESS_DEFINING_SWIPE = 0.05f
     }
 }

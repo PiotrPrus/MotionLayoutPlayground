@@ -50,15 +50,6 @@
         app:constraintSetStart="@id/dislike"
         app:duration="50" />
 
-    <Transition
-        app:constraintSetEnd="@id/clickOnCardEnd"
-        app:constraintSetStart="@id/rest"
-        app:duration="50">
-        <OnClick
-            app:clickAction="transitionToEnd"
-            app:targetId="@id/content" />
-    </Transition>
-
     <ConstraintSet android:id="@+id/rest">
 
         <Constraint
@@ -103,52 +94,6 @@
         </Constraint>
 
     </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/clickOnCardEnd">
-
-        <Constraint
-            android:id="@+id/cardViewScene13"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/colorBlue"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintHeight_percent="0.9"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.9" />
-
-        <Constraint android:id="@+id/cardScene13LikeOverlay">
-            <Layout
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
-                app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
-                app:layout_constraintStart_toStartOf="@id/cardViewScene13"
-                app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
-
-            <PropertySet android:alpha="0.0" />
-            <Transform android:elevation="10dp" />
-        </Constraint>
-
-        <Constraint android:id="@+id/cardScene13DislikeOverlay">
-            <Layout
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="@id/cardViewScene13"
-                app:layout_constraintEnd_toEndOf="@id/cardViewScene13"
-                app:layout_constraintStart_toStartOf="@id/cardViewScene13"
-                app:layout_constraintTop_toTopOf="@id/cardViewScene13" />
-
-            <PropertySet android:alpha="0.0" />
-            <Transform android:elevation="10dp" />
-        </Constraint>
-
-    </ConstraintSet>
-
 
     <ConstraintSet
         android:id="@+id/like"

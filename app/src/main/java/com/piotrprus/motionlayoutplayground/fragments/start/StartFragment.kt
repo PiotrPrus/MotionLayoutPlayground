@@ -102,7 +102,8 @@ class StartFragment : Fragment() {
                 StartSceneItem("scene15 (swipe and click)", R.id.scene15Fragment, "Test onClick and onSwipe on one item"),
                 StartSceneItem("IME Api", R.id.scene16Fragment, "test new ime methods available only in android R (SDK 30)"),
                 StartSceneItem("Flip card", R.id.scene17Fragment, "Try to flip card on click"),
-                StartSceneItem("Animate keyboard", R.id.scene18Fragment, "Test new android 11 API to animate keyboard")
+                StartSceneItem("Animate keyboard", R.id.scene18Fragment, "Test new android 11 API to animate keyboard"),
+                StartSceneItem("Motion and keyboard", R.id.scene19Fragment, "Animate keyboard together with box")
             )
         }
 

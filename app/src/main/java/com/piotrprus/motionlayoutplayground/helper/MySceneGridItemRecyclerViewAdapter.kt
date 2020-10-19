@@ -90,7 +90,10 @@ class MySceneGridItemRecyclerViewAdapter(
             awaitListChanged: suspend () -> Unit,
             removeListener: suspend (Int) -> Unit
         ) {
-            (mView as MotionLayout).apply {
+            (mView as CustomMotionLayout).apply {
+                clickListener = {
+                    scene13WhiteBox.visibility = View.VISIBLE
+                }
                 setTransitionListener(object : MotionLayout.TransitionListener {
                     override fun onTransitionTrigger(
                         p0: MotionLayout?,
@@ -100,19 +103,7 @@ class MySceneGridItemRecyclerViewAdapter(
                     ) {
                     }
 
-                    override fun onTransitionChange(
-                        p0: MotionLayout?,
-                        p1: Int,
-                        p2: Int,
-                        p3: Float
-                    ) {
-                        when {
-                            p1 == R.id.rest && p3 in 0.01f..0.1f -> {
-                                Log.d("AAA", "State STARTED from transitionListener")
-                                animationListener(AnimationState.STARTED)
-                            }
-                        }
-                    }
+                    override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {}
 
                     override fun onTransitionCompleted(motionLayout: MotionLayout?, endScene: Int) {
                         animationListener(AnimationState.COMPLETED)
@@ -125,7 +116,11 @@ class MySceneGridItemRecyclerViewAdapter(
                         }
                     }
 
-                    override fun onTransitionStarted(p0: MotionLayout?, startId: Int, endId: Int) {}
+                    override fun onTransitionStarted(p0: MotionLayout?, startId: Int, endId: Int) {
+                        if (startId == R.id.rest) {
+                            animationListener(AnimationState.STARTED)
+                        }
+                    }
                 })
             }
         }
